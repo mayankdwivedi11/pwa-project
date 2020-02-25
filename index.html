@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do PWA App</title>
+    <link rel="manifest" href="./manifest.json">
+    <script defer src="app.js"></script>
 </head>
 <style>
     * {
@@ -116,6 +118,14 @@ PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8v
                 </div>
         </main>
     </div>
-    <script src="actions.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener("load", function(){
+                navigator.serviceWorker.register('./service-worker.js').then(function(sw){
+                    console.log(sw);
+                })
+            })
+        }
+    </script>
 </body>
 </html>
