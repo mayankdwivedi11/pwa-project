@@ -28,7 +28,7 @@ function addToDo(toDo, id, done, trash) {
     const position = "beforeend";
     list.insertAdjacentHTML(position, item);
 }
-addToDo("drink Coffe");
+// addToDo("drink Coffe");
 
 // Add an item to the list when user hits enter
 document.addEventListener("keyup", function(even) {
