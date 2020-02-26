@@ -48,6 +48,7 @@
         padding: 10px;
         background-color: #5f8b5f;
         border-radius: 10px;
+        font-size: 48px;
     }
     .content{
         height: calc(100% - 80px);
@@ -56,13 +57,21 @@
     }
     #show-date {
         position: absolute;
-        bottom: 20px;
-        color: #32877d;
-        font-size: 24px;
+        bottom: 0;
+        color: #335a6c;
+        font-size: 20px;
         font-weight: bold;
-        background-color: #9eff9e;
-        padding: 20px;
-        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @media only screen and (max-width: 540px) {
+        h1 {
+            font-size: 22px;
+        }
+        #show-date {
+            font-size: 16px;
+            left: 50%;
+        }
     }
     .add-to-do{
         height: 80px;
@@ -75,6 +84,9 @@
         display: flex;
         justify-content: center;
         padding: 20px;
+        height: 30vh;
+        align-items: center;
+        text-align: center;
     }
     /* .clear .refresh {
    
@@ -83,6 +95,7 @@
         display: block;
         width: 32px;
         height: 32px;
+        margin-left: 20px;
     }
     input {
         padding: 12px 15px;
